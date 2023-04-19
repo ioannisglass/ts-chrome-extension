@@ -14,15 +14,6 @@ const Popup = () => {
         return selection!.getRangeAt(0).startContainer.parentNode;
   }
 
-  // useEffect(() => {
-  //   chrome.action.setBadgeText({ text: count.toString() });
-  // }, [count]);
-
-  // useEffect(() => {
-  //   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-  //     setCurrentURL(tabs[0].url);
-  //   });
-  // }, []);
   useEffect(() => {
     document.addEventListener("mouseup", async (e)=>{
       if(window.getSelection() != undefined) {
@@ -42,37 +33,8 @@ const Popup = () => {
     })
   })
 
-  // const changeBackground = () => {
-  //   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-  //     const tab = tabs[0];
-  //     if (tab.id) {
-  //       chrome.tabs.sendMessage(
-  //         tab.id,
-  //         {
-  //           color: "#555555",
-  //         },
-  //         (msg) => {
-  //           console.log("result message:", msg);
-  //         }
-  //       );
-  //     }
-  //   });
-  // };
-
   return (
     <>
-      {/* <ul style={{ minWidth: "700px" }}>
-        <li>Current URL: {currentURL}</li>
-        <li>Current Time: {new Date().toLocaleTimeString()}</li>
-      </ul>
-      <button
-        onClick={() => setCount(count + 1)}
-        style={{ marginRight: "5px" }}
-      >
-        count up
-      </button>
-      <button onClick={changeBackground}>change background</button> */}
-
       <div style={{backgroundColor: "#222", width:500, height: 200, bottom: 20, right: 20, padding: 20, color:"white", position: "fixed", zIndex: 100}}>
         <select name="hTexts" size={50} style={{width: "100%", height: "100%"}}>
           {
@@ -85,11 +47,3 @@ const Popup = () => {
 };
 
 export default Popup;
-
-// const root = createRoot(document.getElementById("root")!);
-
-// root.render(
-  // <React.StrictMode>
-    // <Popup />
-  // </React.StrictMode>
-// );
