@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 import { Inject, Injectable } from '@nestjs/common';
 require('dotenv').config();
 
 import { Configuration, OpenAIApi } from 'openai';
 import { CreateSummaryDto } from './dto/create-summary.dto';
 import { SummaryService } from './service/summary.service';
+=======
+import { Injectable } from '@nestjs/common';
+require('dotenv').config();
+
+import { Configuration, OpenAIApi } from 'openai';
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
 const configuration = new Configuration({
   organization: process.env.ORGANIZATION,
   apiKey: process.env.APIKEY
 });
+<<<<<<< HEAD
 
 
 const openai = new OpenAIApi(configuration);
@@ -18,6 +26,13 @@ export class AppService {
   private readonly summaryService : SummaryService;
   // constructor() {}
 
+=======
+const openai = new OpenAIApi(configuration);
+import got from 'got';
+
+@Injectable()
+export class AppService {
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
   getHello(): string {
     return 'Hello World!';
   }
@@ -33,6 +48,7 @@ export class AppService {
         frequency_penalty: 0.0,
         presence_penalty: 1,
       });
+<<<<<<< HEAD
 
       let summary : CreateSummaryDto = new CreateSummaryDto();
       summary.hText = qus;
@@ -44,6 +60,10 @@ export class AppService {
       return response.data.choices[0].text;
     } catch(err) {
       console.log(err);
+=======
+      return response.data.choices[0].text;
+    } catch(err) {
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
       return 'Tooltip generating failed';
     }
   }

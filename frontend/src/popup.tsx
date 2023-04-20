@@ -1,6 +1,7 @@
 /*global chrome*/
 
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import { DataGrid, GridColDef, GridRenderCellParams, GridValueGetterParams } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
@@ -34,6 +35,13 @@ const Popup = () => {
 
   const [hLightTextList, setHLightTextList] = useState<(hData) []>([]);
   const [AIEnabled, setAIEnabled] = useState<boolean>(true);
+=======
+
+const Popup = () => {
+  // const [count, setCount] = useState(0);
+  // const [currentURL, setCurrentURL] = useState<string>();
+  const [hLightTextList, setHLightTextList] = useState<(string | undefined) []>([]);
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
 
   const getSelectedNode = () =>
   {  
@@ -44,6 +52,7 @@ const Popup = () => {
 
   useEffect(() => {
     document.addEventListener("mouseup", async (e)=>{
+<<<<<<< HEAD
       let checkDom = document.getElementById("AiEnableDom") as HTMLInputElement;
 
       if(checkDom?.checked) {
@@ -64,6 +73,20 @@ const Popup = () => {
             setHLightTextList([...hLightTextList, textSD]);
             selectedNode.setAttribute("title", responseText);
           }
+=======
+      if(window.getSelection() != undefined) {
+        let selectedStr = window.getSelection()?.toString();
+        if(selectedStr == undefined || selectedStr == '')
+          return;
+        const selectedNode = getSelectedNode() as HTMLElement;
+        selectedNode.setAttribute("style", "background-color: yellow");
+        selectedStr = selectedNode.textContent!; 
+        if(selectedStr !== '' && hLightTextList.indexOf(selectedStr!) < 0) {
+          setHLightTextList([...hLightTextList, selectedStr]);
+          // await fetch()
+          const response = await fetch("http://127.0.0.1:8090/answer", { headers: { 'content-type': 'application/json;charset=UTF-8' },  method: "POST", body : JSON.stringify({ qus : selectedStr}) });
+          selectedNode.setAttribute("title", await Promise.resolve(response.text()));
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
         }
       }
     })
@@ -71,6 +94,7 @@ const Popup = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <div style={{backgroundColor: "rgba(255,255,255,0.8)", width:600, height: 700, bottom: 10, right: 20, padding: 20, position: "fixed", zIndex: 100}}>
         <input type="checkbox" id="AiEnableDom" checked={AIEnabled} onChange={e => setAIEnabled(!AIEnabled)}/>
         <label>Enable Generate AI Summarize</label>
@@ -80,9 +104,21 @@ const Popup = () => {
             columns={columns}
             style={{padding: 20, height: 650}}
           />
+=======
+      <div style={{backgroundColor: "#222", width:500, height: 200, bottom: 20, right: 20, padding: 20, color:"white", position: "fixed", zIndex: 100}}>
+        <select name="hTexts" size={50} style={{width: "100%", height: "100%"}}>
+          {
+            hLightTextList.map((data : string | undefined) => (<option value={data}>{data}</option>))
+          }
+        </select>
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default Popup;``
+=======
+export default Popup;
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
@@ -22,6 +23,8 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+=======
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -50,6 +53,7 @@ $ npm run start:prod
 ```bash
 # unit tests
 $ npm run test
+<<<<<<< HEAD
 
 # e2e tests
 $ npm run test:e2e
@@ -71,3 +75,5 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+=======
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9

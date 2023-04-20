@@ -21,6 +21,7 @@
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.5",
+<<<<<<< HEAD
     "@nestjs/mapped-types": "^1.2.2",
     "@nestjs/mongoose": "^9.2.2",
     "@nestjs/platform-express": "^9.0.0",
@@ -29,6 +30,12 @@
     "dotenv": "^16.0.3",
     "got": "^11.8.0",
     "mongoose": "^7.0.4",
+=======
+    "@nestjs/mongoose": "^9.2.2",
+    "@nestjs/platform-express": "^9.0.0",
+    "dotenv": "^16.0.3",
+    "got": "^11.8.0",
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
     "openai": "^3.2.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.5"

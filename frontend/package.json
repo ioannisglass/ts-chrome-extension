@@ -17,9 +17,12 @@
     "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/x-data-grid": "^6.2.0",
+=======
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
     "@nextui-org/react": "^1.0.0-beta.12",
     "babel-preset-es2015": "^6.24.1",
     "got": "^11.8.0",

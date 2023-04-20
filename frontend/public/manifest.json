@@ -1,10 +1,21 @@
 {
   "manifest_version": 3,
 
+<<<<<<< HEAD
   "name": "Chrome Extension TypeScript Starter",
   "description": "Chrome Extension, TypeScript, Visual Studio Code",
   "version": "1.0",
 
+=======
+  "name": "TypeScript Chrome Extension",
+  "description": "Chrome Extension, TypeScript, Visual Studio Code",
+  "version": "1.0",
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+>>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
   "action": {
     "default_icon": "icon.png"
   },
