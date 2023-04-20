@@ -2,10 +2,6 @@ import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 
 const Options = () => {
-<<<<<<< HEAD
-
-  const saveOptions = () => {
-=======
   const [color, setColor] = useState<string>("");
   const [status, setStatus] = useState<string>("");
   const [like, setLike] = useState<boolean>(false);
@@ -41,14 +37,10 @@ const Options = () => {
         return () => clearTimeout(id);
       }
     );
->>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
   };
 
   return (
     <>
-<<<<<<< HEAD
-      this is the option
-=======
       <div>
         Favorite color: <select
           value={color}
@@ -72,7 +64,6 @@ const Options = () => {
       </div>
       <div>{status}</div>
       <button onClick={saveOptions}>Save</button>
->>>>>>> 300108903604018ccfea2da1d6fc2c0867eeffd9
     </>
   );
 };
